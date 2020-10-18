@@ -11,12 +11,12 @@ namespace Calculator.Implementation
     {
         private Helper _helper;
         private Validator _validator;
-        private Calculator _calculator;
+        private CalculatorUtility _calculator;
         public CalculatorWithMutipleDelimiters()
         {
             _helper = new Helper();
             _validator = new Validator();
-            _calculator = new Calculator();
+            _calculator = new CalculatorUtility();
         }
         public int Add(string input)
         {

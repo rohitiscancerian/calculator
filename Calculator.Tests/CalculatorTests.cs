@@ -9,11 +9,11 @@ namespace Calculator.Tests
     [TestClass]
     public class CalculatorTests
     {
-        private Calculator _sut;
+        private CalculatorUtility _sut;
         [TestInitialize]
         public void SetupTests()
         {
-            _sut = new Calculator();
+            _sut = new CalculatorUtility();
         }
         [TestMethod]
         public void Should_ReturnArrayWithOneElement()

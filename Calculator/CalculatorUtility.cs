@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Calculator
 {
-    public class Calculator
+    public class CalculatorUtility
     {
         public int[] GetNegativeNumbersIfAny(int[] arrayIntegers)
         {
