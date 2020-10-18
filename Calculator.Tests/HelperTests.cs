@@ -75,5 +75,23 @@ namespace Calculator.Tests
             Assert.AreEqual(2, arrayNumbers.Length);
         }
 
+        [TestMethod]
+        public void Should_ReturnArrayOfNumbersAfterFirstNewlineWith1Item()
+        {
+            string input = "//*%\n1*";
+            char[] delimiters = new char[] { '*', '%' };
+            var arrayNumbers = _sut.GetArrayOfNumbersAfterFirstNewline(input, delimiters);
+            Assert.AreEqual(1, arrayNumbers.Length);
+        }
+
+        [TestMethod]
+        public void Should_ReturnArrayOfNumbersAfterFirstNewlineWith2Items()
+        {
+            string input = "//*%\n1*2";
+            char[] delimiters = new char[] { '*', '%' };
+            var arrayNumbers = _sut.GetArrayOfNumbersAfterFirstNewline(input, delimiters);
+            Assert.AreEqual(2, arrayNumbers.Length);
+        }
+
     }
 }

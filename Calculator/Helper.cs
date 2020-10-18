@@ -18,10 +18,17 @@ namespace Utility
             return numbersString;
         }
 
-        public int[] GetArrayOfNumbers(string input, char[] delimiters)
+        public int[] GetArrayOfNumbersAfterFirstNewline(string input, char[] delimiters)
         {
             var numbersString = GetSubstringAfterFirstNewLine(input);
             var arrNumbers = numbersString.Split(delimiters);
+            int i = 0;
+            var a = (from s in arrNumbers where int.TryParse(s, out i) select i).ToArray();
+            return a;
+        }
+        public int[] GetArrayOfNumbers(string input, char[] delimiters)
+        {   
+            var arrNumbers = input.Split(delimiters);
             int i = 0;
             var a = (from s in arrNumbers where int.TryParse(s, out i) select i).ToArray();
             return a;
